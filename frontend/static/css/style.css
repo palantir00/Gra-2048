@@ -1,0 +1,101 @@
+/* reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: #faf8ef;
+  font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+  display: flex; justify-content: center; padding-top: 40px;
+}
+
+.game-container {
+  width: 500px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.game-title {
+  font-size: 80px;
+  color: #776e65;
+}
+
+.scores {
+  display: flex;
+  gap: 10px;
+}
+
+.score-box {
+  background: #bbada0;
+  padding: 10px 20px;
+  border-radius: 3px;
+  color: #f9f6f2;
+  text-align: center;
+  font-weight: bold;
+}
+
+.controls {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.controls button {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  background: #8f7a66;
+  color: #f9f6f2;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background: #9e8b78;
+}
+
+.grid-container {
+  background: #bbada0;
+  padding: 10px;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.grid-cell {
+  width: 100%;
+  padding-top: 100%; /* kwadrat */
+  position: relative;
+  background: #cdc1b4;
+  border-radius: 3px;
+}
+
+.grid-cell .inner {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  font-weight: bold;
+  color: #776e65;
+}
+
+/* dodatkowe kolory kafelków */
+.grid-cell.tile-2    .inner { background: #eee4da; }
+.grid-cell.tile-4    .inner { background: #ede0c8; }
+.grid-cell.tile-8    .inner { background: #f2b179; color: #f9f6f2; }
+.grid-cell.tile-16   .inner { background: #f59563; color: #f9f6f2; }
+.grid-cell.tile-32   .inner { background: #f67c5f; color: #f9f6f2; }
+.grid-cell.tile-64   .inner { background: #f65e3b; color: #f9f6f2; }
+.grid-cell.tile-128  .inner { background: #edcf72;  color: #f9f6f2; }
+.grid-cell.tile-256  .inner { background: #ff7322;  color: #f9f6f2; }
+.grid-cell.tile-512  .inner { background: #ffaf00;  color: #f9f6f2; }
+.grid-cell.tile-1024 .inner { background: #bf4b00;  color: #f9f6f2; }
+.grid-cell.tile-2048 .inner { background: #c61c00;  color: #f9f6f2; }
+

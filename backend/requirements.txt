@@ -1,0 +1,7 @@
+Flask==2.3.2
+Flask-RESTful==0.3.9
+Flask-PyMongo==2.3.0
+python-dotenv==1.0.0
+Flask
+flask_pymongo
+python-dotenv

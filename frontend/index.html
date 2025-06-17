@@ -8,7 +8,7 @@
 <body>
 
   <!-- 1. EKRAN STARTOWY -->
-  <div id="startScreen" class="overlay">
+  <div id="startScreen" class="overlay hidden">
     <div class="overlay-content">
       <h2>Wprowadź nazwę gracza</h2>
       <input type="text" id="usernameInput" placeholder="Twoja nazwa" />
@@ -19,6 +19,7 @@
   <!-- 2. WŁAŚCIWA GRA -->
   <div id="gameWrapper" class="hidden">
     <div class="game-container">
+
       <header class="game-header">
         <h1 class="game-title">2048</h1>
         <div class="scores">
@@ -31,20 +32,20 @@
         <button id="restart">New Game</button>
         <button id="hintBtn">Podpowiedz ruch</button>
       </div>
-  <!-- po gridzie -->
-  <div id="grid" class="grid-container"></div>
 
-  <!-- tabela wyników -->
-  <div id="scoreboard" class="scoreboard hidden">
-    <h2>Ranking</h2>
-    <table>
-      <thead>
-        <tr><th>#</th><th>Gracz</th><th>Wynik</th><th>Data</th></tr>
-      </thead>
-      <tbody id="highscoresBody"></tbody>
-    </table>
-    <button id="closeScores">Zamknij</button>
-  </div>
+      <div id="grid" class="grid-container"></div>
+
+      <div id="scoreboard" class="scoreboard hidden">
+        <h2>Ranking</h2>
+        <table>
+          <thead>
+            <tr><th>#</th><th>Gracz</th><th>Wynik</th><th>Data</th></tr>
+          </thead>
+          <tbody id="highscoresBody"></tbody>
+        </table>
+        <button id="closeScores">Zamknij</button>
+      </div>
+
     </div>
   </div>
 

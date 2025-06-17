@@ -1,6 +1,7 @@
 import random
 from logic import can_move
 
+
 class Board:
     def __init__(self, size=4):
         self.size = size

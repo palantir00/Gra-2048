@@ -6,22 +6,45 @@
   <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
-  <div class="game-container">
-    <header class="game-header">
-      <h1 class="game-title">2048</h1>
-      <div class="scores">
-        <div class="score-box">Score<br><span id="score">0</span></div>
-        <div class="score-box">Best<br><span id="best">0</span></div>
-      </div>
-    </header>
 
-    <div class="controls">
-      <button id="restart">New Game</button>
-      <button id="hintBtn">Podpowiedz ruch</button>
+  <!-- 1. EKRAN STARTOWY -->
+  <div id="startScreen" class="overlay">
+    <div class="overlay-content">
+      <h2>Wprowadź nazwę gracza</h2>
+      <input type="text" id="usernameInput" placeholder="Twoja nazwa" />
+      <button id="startBtn">Start</button>
     </div>
+  </div>
 
-    <div id="grid" class="grid-container">
-      <!-- tu JS wstawi 16 .grid-cell -->
+  <!-- 2. WŁAŚCIWA GRA -->
+  <div id="gameWrapper" class="hidden">
+    <div class="game-container">
+      <header class="game-header">
+        <h1 class="game-title">2048</h1>
+        <div class="scores">
+          <div class="score-box">Score<br><span id="score">0</span></div>
+          <div class="score-box">Best<br><span id="best">0</span></div>
+        </div>
+      </header>
+
+      <div class="controls">
+        <button id="restart">New Game</button>
+        <button id="hintBtn">Podpowiedz ruch</button>
+      </div>
+  <!-- po gridzie -->
+  <div id="grid" class="grid-container"></div>
+
+  <!-- tabela wyników -->
+  <div id="scoreboard" class="scoreboard hidden">
+    <h2>Ranking</h2>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Gracz</th><th>Wynik</th><th>Data</th></tr>
+      </thead>
+      <tbody id="highscoresBody"></tbody>
+    </table>
+    <button id="closeScores">Zamknij</button>
+  </div>
     </div>
   </div>
 

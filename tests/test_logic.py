@@ -18,13 +18,11 @@ def test_can_move_false():
     assert not can_move(full)
 
 def test_move_left():
-    # przygotowujemy samą macierz (grid), bez żadnych Board czy spawn_tile
     grid = [[2, 2, 0, 0]] + [[0]*4 for _ in range(3)]
     new_grid, gained, moved = move(grid, 'left')
 
-    assert moved is True     # udało się wykonać ruch
-    assert gained == 4       # 2+2 -> 4 punkty
+    assert moved is True
+    assert gained == 4
 
-    # po merge [2,2,0,0] → [4,0,0,0]
     expected = [[4, 0, 0, 0]] + [[0]*4 for _ in range(3)]
     assert new_grid == expected
